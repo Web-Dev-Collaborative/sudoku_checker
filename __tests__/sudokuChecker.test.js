@@ -22,12 +22,8 @@ describe("sudokuChecker()", () => {
     [9,1,2,3,4,5,6,7,8],
   ]
 
-  // validSudoku[0] => row 0 => [1,2,3,4,5,6,7,8,9]
-  // validSudoku[0][0] => row 0, col 0
-  // validSudoku[1][0] => row 1, col 0
-
   const invalidSudoku = [
-    [2,2,2,4,5,6,7,8,9], 
+    [2,2,2,4,5,6,7,8,9],
     [3,5,4,6,2,5,0,2,3],
     [2,2,2,4,5,6,7,8,9],
     [3,5,4,6,2,5,0,2,3],
@@ -50,28 +46,17 @@ describe("sudokuChecker()", () => {
 })
 
 describe("SudokuChecker.Validator()", () => {
+  const validRow = [[1,2,3,4,5,6,7,8,9]]
 
   test("SudokuChecker.Validator exists", () => {
     const mySudokuChecker = new SudokuChecker()
     expect(mySudokuChecker.validator).toBeDefined();
   })
+
+  test("SudokuChecker.validator validates first row", () => {
+    const mySudokuChecker = new SudokuChecker(validRow)
+    expect(mySudokuChecker.validator()).toEqual(true)
+  })
 })
 
-
-//let compNumber = rox[0] {
-  arrray.inlcudes(compNumber)
-  
-}
-
-// [1,1,2].includes(1) === true
-// const ar = [1,2,3]
-// currentVal = ar.shift() === 1
-// ar === [2,3]
-// ar.includes(currentVal) if true, then duplicate
-
-
-for (let index = 0; index < array.length; index++) {
-  const element = array[index];
-  
-}
 
