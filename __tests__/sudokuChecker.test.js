@@ -1,3 +1,6 @@
+import { SudokuChecker } from "../src/sudokuChecker.js";
+
+
 describe("TEMPLATE TEST", () => {
   test("sanity check", () => {
     expect(true).toEqual(true)
@@ -31,8 +34,13 @@ describe("sudokuChecker()", () => {
   ]
 
   test("SudokuChecker exists", () => {
-    const mySudokuChecker = new mySudokuChecker()
+    const mySudokuChecker = new SudokuChecker()
     expect(mySudokuChecker).toBeDefined()
+  })
+
+  test("SudokuChecker takes in a puzzle", () => {
+    const myValidSudoku = new SudokuChecker(validSudoku)
+    expect(myValidSudoku.puzzle).toEqual(validSudoku)
   })
 
 })
